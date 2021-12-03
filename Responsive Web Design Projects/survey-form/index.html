@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid bg-lightBlue">
+        <div class="row">
+            <div class="col-12">
+                <h1 id="title">Survey Form</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="container sectionLight">
+                    <div class="row">
+                        <div class="col-12">
+                            <p id="description">
+                                Let us know how we can improve freeCodeCamp.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form id="survey-form" autocomplete="on" method="GET" action="http://hedmarklab.com">
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm">
+                                        <label id="name-label">*Name:</label>
+                                    </div>
+                                    <div class="col-6 alignLeft col-sm">
+                                        <input type="text" id="name" placeholder="Enter your name" required autofocus />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm">
+                                        <label id="email-label">*Email:</label>
+                                    </div>
+
+                                    <div class="col-6 alignLeft col-sm">
+                                        <input type="email" id="email" placeholder="Enter your email" required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm">
+                                        <label id="number-label">*Age:</label>
+                                    </div>
+                                    <div class="col-6 alignLeft col-sm">
+                                        <input min="1" max="100" type="number" id="number" placeholder="Enter your age" required />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm">
+                                        <label id="dropdown-label">Which option best describes your current role?
+                    </label>
+                                    </div>
+                                    <div class="col-6 alignLeft col-sm">
+                                        <select id="dropdown">
+                      <option disabled selected>Select an option</option>
+                      <option>Student</option>
+                      <option>Full time job</option>
+                      <option>Full time coder</option>
+                      <option>Prefer not to say</option>
+                      <option>Other</option>
+                    </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm alignTop">
+                                        <label>* How likely is that you would recommend freeCodeCamp
+                      to a friend?
+                    </label>
+                                    </div>
+                                    <div class="col-6 alignLeft col-sm">
+                                        <ul>
+                                            <li>
+                                                <label>
+                          <input type="radio" name="radio-button" value="1" />Definitely!
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="radio" name="radio-button" value="2" />Maybe.
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="radio" name="radio-button" value="3" />Not Sure.
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="radio" name="radio-button" value="4" />Never!
+                        </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm alignTop">
+                                        <label>What do you like most in FCC:
+                    </label>
+                                    </div>
+                                    <div class="col-6 alignLeft col-sm">
+                                        <select id="dropdown">
+                      <option disabled selected>Select an option</option>
+                      <option>Challenges</option>
+                      <option>Projects</option>
+                      <option>Resources</option>
+                      <option>Community</option>
+                      <option>Other</option>
+                    </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm alignTop">
+                                        <label>Things that should be improved in the future
+                      (Check all that apply):
+                    </label>
+                                    </div>
+                                    <div class="col-6 alignLeft col-sm">
+                                        <ul>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="1">
+                          Front-end Projects
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="2">
+                          Back-end Projects
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="3">
+                          Data Visualization
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="4">
+                          Challenges
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="5">
+                          Open Source Community
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="6">
+                          Projects
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="7">
+                          Forum
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="8">
+                          Videos
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="9">
+                          Additional Courses
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="10">
+                          City Meetups
+                        </label>
+                                            </li>
+                                            <li>
+                                                <label>
+                          <input type="checkbox" value="11">
+                          Gitter Help Rooms
+                        </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 alignRight col-sm alignTop">
+                                        <label>*Any comments or other suggestions?
+                    </label>
+                                    </div>
+                                    <div class="col-6 alignLeft col-sm">
+                                        <textarea placeholder="Enter your comments here..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 alignCenter">
+                                        <input type="submit" id="submit">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../bundle.js"></script>
+</body>
+
+</html>

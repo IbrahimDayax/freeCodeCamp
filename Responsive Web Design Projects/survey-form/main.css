@@ -1,0 +1,244 @@
+/* ######## DEFAULTS ######### */
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 85%;
+    margin: 15px auto;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+}
+
+.bg-lightBlue {
+    background-color: lightblue;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* ########### Custom Styles ########### */
+
+#title {
+    text-align: center;
+    font-size: 45px;
+}
+
+.sectionLight {
+    background-color: rgb(250, 248, 248);
+}
+
+#description {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 25px;
+}
+
+label {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+}
+
+#survey-form {
+    display: block;
+    margin: 30px auto;
+}
+
+.alignRight>label {
+    text-align: right;
+    margin-right: 5%;
+}
+
+.alignLeft>input {
+    text-align: left;
+    margin-left: 0;
+}
+
+.alignLeft>ul>li>label {
+    text-align: left;
+    margin-left: 0;
+}
+
+[type="text"],
+[type="email"],
+[type="number"] {
+    padding: 10px;
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#dropdown {
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    margin-left: 0;
+}
+
+.col-sm {
+    margin: 7px auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 3%;
+}
+
+.alignLeft>ul>li {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#dropdown-label {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.alignTop>label {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+textarea {
+    width: 50%;
+    height: 80px;
+    text-align: left;
+    font-size: 20px;
+}
+
+[type="radio"],
+[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#submit {
+    display: block;
+    margin: 30px auto;
+    background-color: darkcyan;
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-size: 25px;
+}
+
+
+/* ########### Mobile ########### */
+
+@media (max-width:700px) {
+
+    .col-sm {
+        width: 100%;
+        margin: 1px auto;
+    }
+
+    .alignLeft>input,
+    .alignRight>label {
+        text-align: left;
+        display: block;
+        margin: 15px auto;
+    }
+
+    .alignRight>label {
+        margin-left: 10%;
+    }
+
+    [type="text"],
+    [type="email"],
+    [type="number"] {
+        width: 80%;
+    }
+
+    #dropdown {
+        margin: auto auto auto 10%;
+    }
+
+    ul {
+        display: block;
+        margin: auto;
+        padding-top: 0;
+        padding-left: 13%;
+    }
+
+    textarea {
+        margin-left: 11%;
+    }
+
+    .alignTop>label {
+        margin-top: 8%;
+    }
+}
