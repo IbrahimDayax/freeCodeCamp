@@ -112,8 +112,8 @@ html {
 /*############ Custom Styles ###########*/
 
 nav#navbar {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     margin: 0;
     position: fixed;
     top: 0;
