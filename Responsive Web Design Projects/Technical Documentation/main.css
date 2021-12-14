@@ -110,7 +110,7 @@
 nav#navbar {
     position: fixed;
     /* min-width: 290px; */
-    top: 18%;
+    top: 20%;
     left: 0;
     /* max-width: 430px; */
     /* width: 300px; */
@@ -155,7 +155,7 @@ header.firstHeader {
     width: 20%;
     /* display: block; */
     margin: auto;
-    font-size: 33px;
+    font-size: 30px;
     /* margin-left: 2%; */
     text-align: center;
 }
@@ -273,7 +273,6 @@ li.noListStyle {
         top: 4%;
         left: 20%;
         right: 20%;
-        height: auto;
         color: black;
         /* margin: auto; */
         text-align: center;
