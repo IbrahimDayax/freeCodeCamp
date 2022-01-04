@@ -35,4 +35,4 @@ const convertToRoman = num => {
     return thousandsPlace + hundredsPlace + tensPlace + onesPlace
 }
 
-console.log(convertToRoman(0));
+console.log(convertToRoman(5));

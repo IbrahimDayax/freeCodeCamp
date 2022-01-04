@@ -1,5 +1,6 @@
 //This algorithm is a simple ROT13 cipher decoder
 const rot13 = str => {
+    str = str.toUpperCase();
     const first = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"];
     const second = ["N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     let result = "";
