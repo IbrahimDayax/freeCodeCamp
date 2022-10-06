@@ -1,0 +1,18 @@
+{
+	"name": "fcc-learn-npm-package-json",
+	"author": "Ibrahim Dayax",
+	"dependencies": {
+		"express": "^4.18.1"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"engines": {
+	"node": "17.9.0"	
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
+	}
+}
