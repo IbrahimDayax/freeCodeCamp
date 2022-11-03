@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exercise Tracker</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <h1 class="title">Exercise Tracker</h1>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-sm-1"></div>
+                <div class="col-6 col-sm-10">
+                    <form action="/api/users" method="post" class="bg-lightBlue">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 centerText col-sm-6">
+                                        <h3>Create a New User</h3>
+                                        <code class="bg-yellow">POST /api/users</code>
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 col-sm-6">
+                                        <input type="text" placeholder="username" name="username" class="fitContainer">
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 col-sm-6">
+                                        <input type="submit" value="Submit" class="fitContainer">
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                            </div> 
+                        </div>  
+                    </form>
+                </div>
+                <div class="col-3 col-sm-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-sm-1"></div>
+                <div class="col-6 col-sm-10">
+                    <form action="" class="bg-lightBlue">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 centerText col-sm-6">
+                                        <h3>Add exercises</h3>
+                                        <code class="bg-yellow">POST /api/users/:_id/exercises</code>
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 col-sm-6">
+                                        <input type="text" placeholder=":_id" class="fitContainer">
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 col-sm-6">
+                                        <input type="text" placeholder="description*" class="fitContainer">
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 col-sm-6">
+                                        <input type="text" placeholder="duration* (mins)" class="fitContainer">
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 col-sm-6">
+                                        <input type="text" placeholder="date (yyyy-mm-dd)" class="fitContainer">
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4 col-sm-3"></div>
+                                    <div class="col-4 col-sm-6">
+                                        <input type="submit" value="Submit" class="fitContainer">
+                                    </div>
+                                    <div class="col-4 col-sm-3"></div>
+                                </div>
+                            </div> 
+                        </div>
+                    </form>
+                </div>
+                <div class="col-3 col-sm-10"></div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-sm-1"></div>
+                <div class="col-6 col-sm-10">
+                    <p>
+                        <strong>GET user's exercise log:</strong>
+                        <code class="bg-yellow">GET /api/users/:_id/logs?[from][&to][&limit]</code>
+                        <p><strong>[]</strong> = optional</p>
+                        <p><strong>from, to</strong> = dates (yyyy-mm-dd); 
+                            <strong>limit</strong> = number
+                        </p>
+                    </p>
+                </div>
+                <div class="col-3 col-sm-1"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
