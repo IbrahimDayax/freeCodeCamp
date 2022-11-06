@@ -1,23 +1,19 @@
 const express = require('express');
 const app = express();
+const port = 3000;
 const cors = require("cors");
 app.use(cors({ optionSuccessStatus: 200 })); // some legacy browsers choke on 204
 app.use(express.static(__dirname + "/public")); // enable cors to allow remote testing by FCC
 
-const port = 3000;
 const filePath = __dirname + "/public/index.html";
 app.get("/", (req, res) => res.sendFile(filePath));
 
-
-const requestIP = require("request-ip");
-app.use(requestIP.mw());
-
-app.use("/api/whoami", (req, res) => {
-    const ipadress = req.clientIp;
-    const language = req.headers["accept-language"];
+app.get("/api/whoami", (req, res) => {
+    const ipaddress = req.headers['client-ip'] || req.headers['x-forwarded-for'];
+    const language = req.acceptsLanguages();
     const software = req.get("User-Agent");
     res.send({
-        ipadress,
+        ipaddress,
         language,
         software
     });
