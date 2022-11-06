@@ -10,24 +10,17 @@ app.get("/", (req, res) => res.sendFile(filePath));
 
 
 const requestIP = require("request-ip");
-const ipMiddleware = (req, res, next) => {
-    requestIP.getClientIp(req);
-    next();
-}
 app.use(requestIP.mw());
 
-app.get("/api/whoami", (req, res) => {
+app.use("/api/whoami", (req, res) => {
     const ipadress = req.clientIp;
-    const language = req.acceptsLanguages();
+    const language = req.headers["accept-language"];
     const software = req.get("User-Agent");
     res.send({
-        ipadress: ipadress,
-        language:language[0],
-        software:software
+        ipadress,
+        language,
+        software
     });
 })
-
-
-
 
 app.listen(port, () => console.log("Express app is listening on port " + port));
