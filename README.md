@@ -1,2 +1,1 @@
-# freeCodeCamp
-repository for my some of my freeCodeCamp code and projects
+This repository contains the code for all the projects I completed to obtain my freeCodeCamp certificates.
