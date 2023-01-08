@@ -1,5 +1,5 @@
 import unittest
-from time_calculator import add_time
+from time_calc import add_time
 
 
 class UnitTests(unittest.TestCase):

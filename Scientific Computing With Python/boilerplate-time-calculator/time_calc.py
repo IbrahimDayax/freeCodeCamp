@@ -10,7 +10,6 @@ def add_time(start_time, duration, day_of_week=None):
     start_time = start_time.split(":")
     # check if the start_time is AM or PM
     AM = start_time[1].endswith("AM")
-    PM = start_time[1].endswith("PM")
     # remove the AM/PM from the start_time List
     start_time[1] = start_time[1].split(" ")[0]
     # separate the duration time into a List with hours being the first item and minutes being the second
@@ -27,7 +26,7 @@ def add_time(start_time, duration, day_of_week=None):
             new_time.minutes = "0" + str(new_time.minutes)
 
     # calculate the number of days that passed
-    days_later = days_passed(new_time.hours, PM) 
+    days_later = days_passed(new_time.hours, AM) 
     # calculate the new time of day
     time_of_day = am_or_pm(AM, new_time.hours)
       
@@ -36,7 +35,7 @@ def add_time(start_time, duration, day_of_week=None):
         day_index = weekdays.index(day_of_week)
         if new_time.hours > 24:
             new_time.hours = new_time.hours - days_later * 24
-        elif new_time.hours > 12:
+        if new_time.hours > 12:
             new_time.hours -= 12
         if day_index + days_later > 6:
             day_index = (days_later + day_index) - 7
@@ -55,9 +54,9 @@ def add_time(start_time, duration, day_of_week=None):
     else:
         if new_time.hours > 24:
             new_time.hours = new_time.hours - days_later * 24
-            if new_time.hours == 0:
-                new_time.hours = 12
-        elif new_time.hours > 12:
+        if new_time.hours == 0:
+            new_time.hours = 12
+        if new_time.hours > 12:
             new_time.hours -= 12
         if days_later > 1:
             return new_time.__str__() + time_of_day + " (" + str(days_later) + " days later" + ")"
@@ -67,4 +66,4 @@ def add_time(start_time, duration, day_of_week=None):
             return new_time.__str__() + time_of_day
         
         
-print(add_time("11:30 PM", "24:32"))
+print(add_time("2:59 AM", "24:00", "saturDay"))
