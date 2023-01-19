@@ -8,18 +8,7 @@ const filePath = __dirname + "/views/index.html";
 const port = 3000;
 
 require('dotenv').config();
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-
-
-
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-// const uri = "mongodb+srv://ibrahim:1Brah!m@Mongodb@cluster0.ttprsk8.mongodb.net/exercise-tracker?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-// client.connect(err => {
-//   const collection = client.db("test").collection("devices");
-//   // perform actions on the collection object
-//   client.close();
-// });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 
 app.get("/", (req, res) => res.sendFile(filePath));
